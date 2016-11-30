@@ -19,7 +19,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private TabLayoutAdapter mTabLayoutAdapter;
-    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+
+        /*Keeps fragment pages activesfrom 2 to right and left, Only 3 frags in this app*/
+        viewPager.setOffscreenPageLimit(2);
         mTabLayoutAdapter = new TabLayoutAdapter(getSupportFragmentManager(), tabLayout, viewPager);
         mTabLayoutAdapter.addItem(new Start(), "Drive", R.drawable.ic_directions_car_white_24dp);
         mTabLayoutAdapter.addItem(new Sessions(), "Sessions", R.drawable.ic_event_note_white_24dp);

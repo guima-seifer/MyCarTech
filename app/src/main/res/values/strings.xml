@@ -1,9 +1,37 @@
 <resources>
     <string name="app_name">MyCarTech</string>
-    <string name="hint_email">Email</string>
-    <string name="hint_password">Password</string>
+
     <string name="b_login">Login</string>
     <string name="link_to_register">Register</string>
     <string name="err_msg_email">Enter valid email address</string>
     <string name="err_msg_password">Enter valid password</string>
+
+    <string name="fb_login_protocol_scheme">fb1620749928228241</string>
+    <string name="facebook_app_id">1098220446952830</string>
+
+    <string name="label_emailpassword">Email/Password Authentication</string>
+    <string name="desc_emailpassword">Use an email and password to authenticate with Firebase.</string>
+    <string name="hint_user_id">User ID</string>
+    <string name="get_custom_token">Get Token</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_account">Create Account</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="loading">Loading…</string>
+    <string name="custom_token">Custom Token</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="token_null">Token: null</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="desc_firebase_lockup">Firebase logo and name</string>
+    <string name="auth_failed">Authentication failed</string>
+
+    <string name="emailpassword_status_fmt">Email User: %s</string>
+    <string name="emailpassword_title_text">Email and Password</string>
+
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="firebase_user_management">Firebase User Management</string>
+    <string name="providers">Or, with one of this providers:</string>
+    <string name="github_password">GitHub Password</string>
+    <string name="github_username">GitHub Username</string>
 </resources>

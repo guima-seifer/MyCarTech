@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "389916448567",
+    "firebase_url": "https://mycartech-dda53.firebaseio.com",
+    "project_id": "mycartech-dda53",
+    "storage_bucket": "mycartech-dda53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389916448567:android:697bb240729ba463",
+        "android_client_info": {
+          "package_name": "com.pti.MyCarTech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389916448567-a8r9ao32m0t0a2c1go233tr23sacvvdf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pti.MyCarTech",
+            "certificate_hash": "0F6752D14B0BA564BD70958ECD9D0E7464036682"
+          }
+        },
+        {
+          "client_id": "389916448567-7g7hee2qfkcrecofqd6kqd0tb28o4ub2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg1eohvtUE4OdjKto2CCjyaknXDtMHYNE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389916448567-7g7hee2qfkcrecofqd6kqd0tb28o4ub2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

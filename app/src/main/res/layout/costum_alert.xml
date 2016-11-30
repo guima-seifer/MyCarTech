@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/a"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:text="End session"
+        android:textSize="21sp"
+        android:textColor="@color/white"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TEXTO"
+        android:id="@+id/text_dialog"
+        android:layout_below="@+id/a"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/secondary_text"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="No"
+        android:id="@+id/btn_dialog2"
+        android:gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@+id/text_dialog"
+        android:layout_alignRight="@+id/text_dialog"
+        android:layout_alignEnd="@+id/text_dialog"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Yes"
+        android:id="@+id/btn_dialog"
+        android:gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        android:textColor="@color/colorAccent"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_below="@+id/text_dialog"
+        android:layout_alignLeft="@+id/text_dialog"
+        android:layout_alignStart="@+id/text_dialog" />
+</RelativeLayout>

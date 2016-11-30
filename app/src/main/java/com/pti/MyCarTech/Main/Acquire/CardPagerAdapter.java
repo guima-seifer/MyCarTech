@@ -24,6 +24,7 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
         mData = new ArrayList<>();
         mViews = new ArrayList<>();
 
+        //Populate here
         for (int i = 0; i < 5; i++) {
             mData.add("");
             mViews.add(null);

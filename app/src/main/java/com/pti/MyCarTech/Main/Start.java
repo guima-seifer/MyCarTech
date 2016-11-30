@@ -28,7 +28,6 @@ public class Start extends Fragment {
         View root = inflater.inflate(R.layout.activity_start, container, false);
         final Intent intent = new Intent(getActivity(), Session_capture.class);
 
-
         final Button start = (Button) root.findViewById(R.id.b_start);
 
         start.setOnClickListener(new View.OnClickListener() {
