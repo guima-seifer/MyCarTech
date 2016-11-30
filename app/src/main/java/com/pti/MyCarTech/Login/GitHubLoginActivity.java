@@ -145,6 +145,7 @@ public class GitHubLoginActivity extends BaseActivity{
 
 
     private void handleGitHubAccessToken(String token) {
+        Snackbar snackbar;
         // [START_EXCLUDE silent]
         showProgressDialog();
         // [END_EXCLUDE]
@@ -173,13 +174,14 @@ public class GitHubLoginActivity extends BaseActivity{
                             startActivity(new Intent(getApplication(), GitHubLoginActivity.class));
                             GitHubLoginActivity.this.finish();
                         }if (task.isSuccessful()) {
-                            Log.w(TAG, "Success");
+                            Log.w(TAG, "task email: " + task.getResult().getUser().getEmail());
 
                             /**
                              * Now we have to get User info from GitHub and update it on FirebaseAuth
                              * */
+                        String taskEmail = task.getResult().getUser().getEmail();
 
-                        if(task.getResult().getUser().getEmail() == null) {
+                        if(taskEmail == null) {
                             aux = false;
                             LoginService service = ServiceGenerator.createService(LoginService.class, mEmailField.getText().toString().trim(), mPasswordField.getText().toString().trim());
 
@@ -187,6 +189,7 @@ public class GitHubLoginActivity extends BaseActivity{
                             requestLogin.enqueue(new Callback<List<Email>>() {
                                 @Override
                                 public void onResponse(Call<List<Email>> call, Response<List<Email>> response) {
+                                    Snackbar snackbar;
                                     if (!response.isSuccessful()) {
                                         Log.d(TAG, "Erro UserData Response: " + response.code() + " " + response.message());
                                     } else {
@@ -205,14 +208,20 @@ public class GitHubLoginActivity extends BaseActivity{
                                                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                                                     @Override
                                                     public void onComplete(@NonNull Task<Void> task) {
+                                                        Snackbar snackbar;
                                                         if (task.isSuccessful()) {
+                                                            hideProgressDialog();
                                                             aux = true;
                                                             Log.d(TAG, "Success --- User email address updated.");
+                                                            Toast.makeText(getApplicationContext(), "User registered successfully ",
+                                                                    Toast.LENGTH_LONG).show();
+                                                            startActivity(new Intent(getApplication(), com.pti.MyCarTech.Main.MainActivity.class));
+                                                            GitHubLoginActivity.this.finish();
 
                                                         } else {
                                                             hideProgressDialog();
                                                             aux = false;
-                                                            Snackbar snackbar = Snackbar
+                                                            snackbar = Snackbar
                                                                     .make(linearlayout, "Primary email already registered, try with other provider", Snackbar.LENGTH_LONG)
                                                                     .setAction("CLOSE", new View.OnClickListener() {
                                                                         @Override
@@ -235,6 +244,9 @@ public class GitHubLoginActivity extends BaseActivity{
                                     Log.d(TAG, "Error UserData Response: " + t.getMessage());
                                 }
                             });
+                            //in case there is a available email in task.getResult().getUser().getEmail()
+                        }else{
+                            aux = true;
                         }
                             if(aux) {
                                 Toast.makeText(getApplicationContext(), "Welcome " + task.getResult().getUser().getDisplayName(),
@@ -250,17 +262,52 @@ public class GitHubLoginActivity extends BaseActivity{
     }
     private boolean validateForm() {
         boolean valid = true;
-
+        Snackbar snackbar;
         String email = mEmailField.getText().toString();
+        String password = mPasswordField.getText().toString();
+
+
+        if(TextUtils.isEmpty(password) && TextUtils.isEmpty(email)){
+            snackbar = Snackbar
+                    .make(linearlayout, "Please fill the form", Snackbar.LENGTH_LONG)
+                    .setAction("CLOSE", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                        }
+                    });
+            snackbar.setActionTextColor(getResources().getColor(R.color.colorAccent));
+            snackbar.show();
+            valid = false;
+            return valid;
+        }
+
+
         if (TextUtils.isEmpty(email)) {
+            snackbar = Snackbar
+                    .make(linearlayout, "Insert valid email/username", Snackbar.LENGTH_LONG)
+                    .setAction("CLOSE", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                        }
+                    });
+            snackbar.setActionTextColor(getResources().getColor(R.color.colorAccent));
+            snackbar.show();
             mEmailField.setError("Required.");
             valid = false;
         } else {
             mEmailField.setError(null);
         }
 
-        String password = mPasswordField.getText().toString();
         if (TextUtils.isEmpty(password)) {
+            snackbar = Snackbar
+                    .make(linearlayout, "Insert a valid password", Snackbar.LENGTH_LONG)
+                    .setAction("CLOSE", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                        }
+                    });
+            snackbar.setActionTextColor(getResources().getColor(R.color.colorAccent));
+            snackbar.show();
             mPasswordField.setError("Required.");
             valid = false;
         } else {
