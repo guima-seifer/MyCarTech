@@ -1,8 +1,7 @@
-package com.pti.MyCarTech.Main;
+package com.pti.MyCarTech.Main.Acquire;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.pti.MyCarTech.Main.Acquire.Session_capture;
+import com.pti.MyCarTech.Main.Sessions.Sessions;
 import com.pti.MyCarTech.R;
 
 public class Start extends Fragment {

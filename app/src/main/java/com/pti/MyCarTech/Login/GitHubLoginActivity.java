@@ -23,8 +23,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GithubAuthProvider;
 import com.pti.MyCarTech.Login.GitHubAuthentication.LoginService;
 import com.pti.MyCarTech.Login.GitHubAuthentication.ServiceGenerator;
-import com.pti.MyCarTech.Login.models.AppCredentials;
-import com.pti.MyCarTech.Login.models.Email;
+import com.pti.MyCarTech.models.AppCredentials;
+import com.pti.MyCarTech.models.Email;
 import com.pti.MyCarTech.R;
 
 import java.util.List;

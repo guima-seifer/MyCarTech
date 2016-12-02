@@ -13,8 +13,8 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
-import com.pti.MyCarTech.Login.GoogleSignInActivity;
 import com.pti.MyCarTech.Login.LoginActivity;
+import com.pti.MyCarTech.Main.Sessions.Sessions;
 import com.pti.MyCarTech.R;
 
 public class Profile extends Fragment {

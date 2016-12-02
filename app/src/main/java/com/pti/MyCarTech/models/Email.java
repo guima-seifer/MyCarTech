@@ -1,6 +1,4 @@
-package com.pti.MyCarTech.Login.models;
-
-import java.util.ArrayList;
+package com.pti.MyCarTech.models;
 
 /**
  * Created by fernando on 29-11-2016.

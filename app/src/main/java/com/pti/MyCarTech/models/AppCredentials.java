@@ -1,4 +1,4 @@
-package com.pti.MyCarTech.Login.models;
+package com.pti.MyCarTech.models;
 
 /**
  * Created by fernando on 24-11-2016.

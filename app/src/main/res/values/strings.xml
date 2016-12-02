@@ -34,4 +34,9 @@
     <string name="providers">Or, with one of this providers:</string>
     <string name="github_password">GitHub Password</string>
     <string name="github_username">GitHub Username</string>
+    <string name="session_id">Session Id</string>
+    <string name="date">Date</string>
+    <string name="cons_medio">Consumo Médio: </string>
+    <string name="dist_percorrida">Distância Percorrida: </string>
+    <string name="sessiom">Sessão:</string>
 </resources>

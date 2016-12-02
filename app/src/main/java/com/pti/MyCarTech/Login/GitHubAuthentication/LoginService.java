@@ -1,8 +1,8 @@
 package com.pti.MyCarTech.Login.GitHubAuthentication;
 
 
-import com.pti.MyCarTech.Login.models.AppCredentials;
-import com.pti.MyCarTech.Login.models.Email;
+import com.pti.MyCarTech.models.AppCredentials;
+import com.pti.MyCarTech.models.Email;
 
 import java.util.List;
 

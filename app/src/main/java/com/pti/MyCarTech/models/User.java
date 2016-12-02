@@ -1,4 +1,4 @@
-package com.pti.MyCarTech.Login.models;
+package com.pti.MyCarTech.models;
 
 /**
  * Created by fernando on 29-11-2016.
@@ -9,16 +9,16 @@ public class User {
     private String id;
     private String name;
     private String email;
-    private String avatar_url;
+    private String photo;
     private String url;
     private String html_url;
 
-    public User(String login, String id, String name, String email, String avatar_url, String url, String html_url) {
+    public User(String login, String id, String name, String email, String photo, String url, String html_url) {
         this.login = login;
         this.id = id;
         this.name = name;
         this.email = email;
-        this.avatar_url = avatar_url;
+        this.photo = photo;
         this.url = url;
         this.html_url = html_url;
     }
@@ -58,12 +58,12 @@ public class User {
         this.email = email;
     }
 
-    public String getAvatar_url() {
-        return avatar_url;
+    public String getPhoto() {
+        return photo;
     }
 
-    public void setAvatar_url(String avatar_url) {
-        this.avatar_url = avatar_url;
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 
     public String getUrl() {
@@ -89,7 +89,7 @@ public class User {
                 ", id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", avatar_url='" + avatar_url + '\'' +
+                ", avatar_url='" + photo + '\'' +
                 ", url='" + url + '\'' +
                 ", html_url='" + html_url + '\'' +
                 '}';
